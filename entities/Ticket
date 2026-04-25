@@ -1,0 +1,55 @@
+{
+  "name": "Ticket",
+  "type": "object",
+  "properties": {
+    "passenger_email": {
+      "type": "string",
+      "description": "Email of the passenger"
+    },
+    "passenger_name": {
+      "type": "string",
+      "description": "Name of the passenger"
+    },
+    "schedule_id": {
+      "type": "string"
+    },
+    "bus_id": {
+      "type": "string"
+    },
+    "bus_number": {
+      "type": "string"
+    },
+    "route_id": {
+      "type": "string"
+    },
+    "route_name": {
+      "type": "string"
+    },
+    "travel_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "departure_time": {
+      "type": "string"
+    },
+    "fare": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Booked",
+        "Cancelled",
+        "Completed"
+      ],
+      "default": "Booked"
+    },
+    "seat_number": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "passenger_email",
+    "passenger_name",
+    "schedule_id",
+    "bus_id",
