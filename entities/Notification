@@ -1,0 +1,45 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "delay",
+        "status_change",
+        "accident",
+        "general"
+      ],
+      "default": "general"
+    },
+    "bus_id": {
+      "type": "string"
+    },
+    "bus_number": {
+      "type": "string"
+    },
+    "route_id": {
+      "type": "string"
+    },
+    "target_audience": {
+      "type": "string",
+      "enum": [
+        "all",
+        "passengers",
+        "admin"
+      ],
+      "default": "all"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "title",
