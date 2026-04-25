@@ -1,0 +1,53 @@
+{
+  "name": "Route",
+  "type": "object",
+  "properties": {
+    "route_name": {
+      "type": "string",
+      "description": "Name of the route"
+    },
+    "origin": {
+      "type": "string",
+      "description": "Starting point"
+    },
+    "destination": {
+      "type": "string",
+      "description": "End point"
+    },
+    "stops": {
+      "type": "array",
+      "description": "List of stops along the route",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "order": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "distance_km": {
+      "type": "number",
+      "description": "Total distance in kilometers"
+    },
+    "estimated_duration_min": {
+      "type": "number",
+      "description": "Estimated travel time in minutes"
+    },
+    "fare": {
+      "type": "number",
+      "description": "Ticket fare in ZAR"
+    }
+  },
+  "required": [
+    "route_name",
+    "origin",
