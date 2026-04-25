@@ -1,0 +1,59 @@
+{
+  "name": "Bus",
+  "type": "object",
+  "properties": {
+    "bus_number": {
+      "type": "string",
+      "description": "Unique bus registration/fleet number"
+    },
+    "capacity": {
+      "type": "number",
+      "description": "Total passenger capacity"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Inactive",
+        "Delayed",
+        "Completed",
+        "Maintenance"
+      ],
+      "default": "Inactive",
+      "description": "Current operational status"
+    },
+    "current_latitude": {
+      "type": "number",
+      "description": "Current GPS latitude"
+    },
+    "current_longitude": {
+      "type": "number",
+      "description": "Current GPS longitude"
+    },
+    "assigned_driver_id": {
+      "type": "string",
+      "description": "ID of the assigned driver"
+    },
+    "assigned_driver_name": {
+      "type": "string",
+      "description": "Name of the assigned driver"
+    },
+    "assigned_route_id": {
+      "type": "string",
+      "description": "ID of the assigned route"
+    },
+    "assigned_route_name": {
+      "type": "string",
+      "description": "Name of the assigned route"
+    },
+    "model": {
+      "type": "string",
+      "description": "Bus make and model"
+    },
+    "year": {
+      "type": "number",
+      "description": "Year of manufacture"
+    }
+  },
+  "required": [
+    "bus_number",
