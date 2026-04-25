@@ -1,0 +1,42 @@
+{
+  "name": "Driver",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Driver's full name"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Driver's phone number"
+    },
+    "license_number": {
+      "type": "string",
+      "description": "Driver's license number"
+    },
+    "email": {
+      "type": "string",
+      "description": "Driver's email address"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Available",
+        "On Duty",
+        "Off Duty",
+        "On Leave"
+      ],
+      "default": "Available"
+    },
+    "assigned_bus_id": {
+      "type": "string",
+      "description": "ID of the assigned bus"
+    },
+    "assigned_bus_number": {
+      "type": "string",
+      "description": "Number of the assigned bus"
+    }
+  },
+  "required": [
+    "full_name",
+    "phone",
