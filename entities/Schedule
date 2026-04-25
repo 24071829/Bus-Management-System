@@ -1,0 +1,51 @@
+{
+  "name": "Schedule",
+  "type": "object",
+  "properties": {
+    "bus_id": {
+      "type": "string"
+    },
+    "bus_number": {
+      "type": "string"
+    },
+    "driver_id": {
+      "type": "string"
+    },
+    "driver_name": {
+      "type": "string"
+    },
+    "route_id": {
+      "type": "string"
+    },
+    "route_name": {
+      "type": "string"
+    },
+    "departure_time": {
+      "type": "string",
+      "description": "Scheduled departure time (HH:MM)"
+    },
+    "arrival_time": {
+      "type": "string",
+      "description": "Scheduled arrival time (HH:MM)"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Schedule date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Scheduled",
+        "In Progress",
+        "Completed",
+        "Cancelled",
+        "Delayed"
+      ],
+      "default": "Scheduled"
+    }
+  },
+  "required": [
+    "bus_id",
+    "route_id",
+    "departure_time",
